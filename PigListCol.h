@@ -14,4 +14,6 @@ class PigListCol {
     PigList getActivePigList();
 
     void createNewPigList();
-}
+};
+
+#endif

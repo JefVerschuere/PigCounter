@@ -16,4 +16,6 @@ class PigList {
 
     bool isThisTheLastPig();
     
-}
+};
+
+#endif
