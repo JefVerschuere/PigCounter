@@ -5,9 +5,9 @@ PigList::PigList(byte nr) {
 }
 
 PigList::addPigIn(){
-    this->pigCpIn++
+    this->pigCpIn = this->pigCpIn +1;
 }
 
 PigList::addPigOut(){
-    this->pigCpOut++
+    this->pigCpOut = this->pigCpOut +1;
 }
