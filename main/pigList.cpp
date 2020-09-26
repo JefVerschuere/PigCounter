@@ -1,5 +1,7 @@
 #include "pigList.h";
 
+PigList::PigList() {}
+
 PigList::PigList(byte nr) {
     this->serieNumber = nr;
 }
