@@ -7,13 +7,13 @@
 
 class PigListCol {
     private: 
-        PigList pigLists[11];
+        PigList allPigLists[11];
     public:
     PigListCol();
 
-    PigList getActivePigList();
+    PigList getActivePigList(byte nr);
 
-    void createNewPigList();
+    void createNewPigList(byte nr);
 };
 
 #endif

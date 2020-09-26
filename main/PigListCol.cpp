@@ -4,10 +4,10 @@ PigListCol::PigListCol(){
 
 }
 
-PigListCol::getActivePigList(byte nr){
-    return this->pigLists[nr];
+PigList PigListCol::getActivePigList(byte nr){
+    return this->allPigLists[nr];
 }
 
-PigListCol::createNewPigList(byte nr){
-    this->pigLists[nr] = new PigList(nr);
+void PigListCol::createNewPigList(byte nr){
+    this->allPigLists[nr].setSerieNumber(nr);
 }

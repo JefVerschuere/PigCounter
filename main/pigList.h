@@ -10,7 +10,9 @@ class PigList {
         byte pigCpIn;
     public:
     PigList(byte serieNumber);
+    PigList();
 
+    void setSerieNumber(byte serieNumber);
     void addPigIn();
     void addPigOut();
 

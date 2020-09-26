@@ -5,14 +5,14 @@
 //#include <Wire.h>
 #include <RTClib.h>
 
-RTC_DS1307 rtc;
+// RTC_DS1307 rtc;
 //DateTime now = rtc.now();
 
 //const int chipSelect = 10;
 //const String nameFile = "AB_Sang.csv";
 //File fichier;*/
 
-const PigListCol pigListCol = new PigListCol();
+const PigListCol* pigListCol = new PigListCol();
 
 const byte NouvelleSerie = A0; 
 const byte SerieValide = A4;
@@ -54,7 +54,7 @@ void interruptPorcIN()
   unsigned long date = millis();
   if ((date - dateDernierChangement) > dureeAntiRebond) {
     comptagePorcIN++;
-    pigListCol->getActivePigList(comptageNouvelleSerie)->addPigIn();
+    pigListCol->getActivePigList(comptageNouvelleSerie).addPigIn();
     dateDernierChangement = date;
   }
 }
@@ -68,7 +68,7 @@ void interruptPorcOUT()
   unsigned long date = millis();
   if ((date - dateDernierChangement) > dureeAntiRebond) {
     comptagePorcOUT++;
-    pigListCol->getActivePigList(comptageNouvelleSerie)->addPigOut();
+    pigListCol->getActivePigList(comptageNouvelleSerie).addPigOut();
     dateDernierChangement = date;
   }
 }
